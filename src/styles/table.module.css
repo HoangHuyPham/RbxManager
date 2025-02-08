@@ -1,0 +1,38 @@
+.selected {
+    background-color: var(--primary);
+    color: var(--bg-color);
+}
+
+.offline {
+    background-color: var(--warning)
+}
+
+.loading::before{
+    content: "";
+    color: var(--text-color);
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 100%;
+    background: url("../images/spin.gif") no-repeat center;
+    background-size: contain;
+    z-index: 1;
+}
+
+.online {
+    background-color: var(--success)
+}
+
+.span {
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--text-color);
+}
+
+@keyframes loading {
+    from{
+      transform: translatex(0%);
+    }to{
+      transform: translatex(200%);
+    }
+  }
